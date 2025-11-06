@@ -1,7 +1,7 @@
 # 🌐 **AI Development Environment Setup & Agentic Frameworks Guide**
 
 Welcome to the **AI Development Setup Guide** 🎓  
-Designed for students, researchers, and developers venturing into **LLM-based and agentic systems**, this guide will help you go from **setup ➜ structure ➜ frameworks ➜ deployment**.  
+Designed for researchers, and developers venturing into **LLM-based and agentic systems**, this guide will help you go from **setup ➜ structure ➜ frameworks ➜ deployment**.  
 
 > 🧠 *“A well-prepared environment is the foundation of every successful AI experiment.”*  
 
@@ -40,10 +40,6 @@ deactivate
 
 ---
 
-![Virtual Env Illustration](https:)
-
----
-
 ## 🔐 2. Environment Variables (`.env` File)
 
 ### 🧾 **Purpose**
@@ -71,9 +67,6 @@ Always add `.env` to `.gitignore`:
 ```bash
 echo ".env" >> .gitignore
 ```
-
-![Env File Illustration](https://miro.medium.com/v2/resize:fit:720/format:webp/1*dZNYuFtLHvFj8fPlM14iVw.png)
-
 ---
 
 ## 🧩 3. VS Code Extensions for AI Projects
