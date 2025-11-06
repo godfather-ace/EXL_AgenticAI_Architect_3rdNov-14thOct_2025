@@ -1,6 +1,5 @@
 # 🌐 **AI Development Environment Setup & Agentic Frameworks Guide**
 
-Welcome to the **AI Development Setup Guide** 🎓  
 Designed for researchers, and developers venturing into **LLM-based and agentic systems**, this guide will help you go from **setup ➜ structure ➜ frameworks ➜ deployment**.  
 
 > 🧠 *“A well-prepared environment is the foundation of every successful AI experiment.”*  
