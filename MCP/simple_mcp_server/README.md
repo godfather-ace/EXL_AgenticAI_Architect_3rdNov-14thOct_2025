@@ -1,0 +1,1 @@
+#### This is a simple mcp server demo based on python project created using uv project manager
