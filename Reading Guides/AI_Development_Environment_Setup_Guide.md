@@ -235,7 +235,7 @@ AI agents are **autonomous systems** that plan, reason, and act.
 | **LangGraph** | Graph-based agent orchestration | [langchain-ai.github.io/langgraph/](https://langchain-ai.github.io/langgraph/) |
 | **Autogen (Microsoft)** | Multi-agent coordination library | [github.com/microsoft/autogen](https://github.com/microsoft/autogen) |
 | **Smolagents (Hugging Face)** | Lightweight agent orchestration | [huggingface.co/docs/smolagents](https://huggingface.co/docs/smolagents) |
-| **Smithery** | Test and evaluate agentic systems | [smithery.ai](https://smithery.ai) |
-| **mcp.so** | Cloud-based AI agent platform | [mcp.so](https://mcp.so) |
+| **Smithery** | MCP Repository | [smithery.ai](https://smithery.ai) |
+| **mcp.so** | MCP Repository | [mcp.so](https://mcp.so) |
 
 ---
