@@ -26,7 +26,7 @@ Amazon Bedrock AgentCore represents the **enterprise-grade infrastructure** for 
 <p align="center">
   <img src="images/AWS_Bedrock_AgentCore_Components.png" alt="AgentCore_Components" />
   <br/>
-  **AgentCore Components**
+  <i>AgentCore Components</i>
 </p>
 
 ### ⚙️ Core Components & Function
@@ -39,7 +39,7 @@ Amazon Bedrock AgentCore represents the **enterprise-grade infrastructure** for 
 <p align="center">
   <img src="images/AgentCore_Runtime_Workflow.png" alt="AgentCore_Runtime" />
   <br/>
-  **AgentCore Runtime Workflow**
+  <i>AgentCore Runtime Workflow</i>
 </p>
 
 ---
