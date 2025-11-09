@@ -23,7 +23,8 @@ Amazon Bedrock is a **fully managed service** that offers simplified, serverless
 
 Amazon Bedrock AgentCore represents the **enterprise-grade infrastructure** for the secure, scalable, and observable deployment and operation of complex AI agents within the Bedrock ecosystem. It serves as the robust **runtime and control center** for production-ready agents.
 
-![AgentCore Components](images/AWS_Bedrock_AgentCore_Components.png)
+![AgentCore Components](images/AWS_Bedrock_AgentCore_Components.png "AgentCore Components")
+
 
 ### ⚙️ Core Components & Function
 * **AgentCore Runtime:** A serverless, low-latency execution environment designed to manage the lifecycle and execution of multi-step, long-running agent tasks.
@@ -31,6 +32,8 @@ Amazon Bedrock AgentCore represents the **enterprise-grade infrastructure** for 
 * **Enterprise Observability:** Provides deep integration with AWS monitoring services (like CloudWatch) and Open Telemetry for robust debugging, logging, and performance monitoring.
 * **Identity & Security:** Ensures secure operation with enterprise-grade authentication, authorization, and audit capabilities.
 * **Memory Management:** Offers sophisticated mechanisms for managing both short-term (contextual) and long-term (knowledge-based) agent memory.
+
+![AgentCore Runtime](images/AgentCore_Runtime_Workflow.png "AgentCore Runtime Workflow")
 
 ---
 
