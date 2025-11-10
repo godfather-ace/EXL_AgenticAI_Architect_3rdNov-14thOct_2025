@@ -22,7 +22,11 @@ Before starting, ensure you have:
 
 ## Step 1 — Create a New Repository on GitHub
 
-![Create a new repository](1.png)
+<p align="center">
+  <img src="ss/1.png" alt="New Repo" />
+  <br/>
+  <i>Create a new repository</i>
+</p>
 
 1. Go to your GitHub profile → **New Repository**.  
 2. Name it `agentcore`.  
@@ -33,7 +37,11 @@ Before starting, ensure you have:
 
 ## Step 2 — Open Repository in Codespaces
 
-![Open repository in Codespaces](2.png)
+<p align="center">
+  <img src="ss/2.png" alt="Codespaces" />
+  <br/>
+  <i>Open Repo in Codespaces</i>
+</p>
 
 1. Click **Code → Codespaces → Create codespace on main**.
 
