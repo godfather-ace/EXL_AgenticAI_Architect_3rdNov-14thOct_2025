@@ -1,4 +1,4 @@
-# ☁️ AWS Generative AI Ecosystem Writeup
+# ☁️ AWS Generative AI Ecosystem
 
 This document provides a detailed overview of **Amazon Bedrock**, **Amazon Bedrock AgentCore**, and **Strands Agents**, key components in the AWS ecosystem for building and scaling generative AI applications and agents.
 
