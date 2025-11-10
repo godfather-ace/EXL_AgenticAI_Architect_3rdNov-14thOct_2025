@@ -25,7 +25,6 @@ Before starting, ensure you have:
 <p align="center">
   <img src="ss/1.png" alt="New Repo" />
   <br/>
-  <i>Create a new repository</i>
 </p>
 
 1. Go to your GitHub profile → **New Repository**.  
@@ -40,7 +39,6 @@ Before starting, ensure you have:
 <p align="center">
   <img src="ss/2.png" alt="Codespaces" />
   <br/>
-  <i>Open Repo in Codespaces</i>
 </p>
 
 1. Click **Code → Codespaces → Create codespace on main**.
@@ -49,7 +47,10 @@ Before starting, ensure you have:
 
 ## Step 3 — Initialize Your Codespace
 
-![Initialize codespace](3.png)
+<p align="center">
+  <img src="ss/3.png" alt="Initialize Codespace" />
+  <br/>
+</p>
 
 ```bash
 touch .gitignore .env
@@ -61,8 +62,10 @@ Both files will appear in your workspace.
 
 ## Step 4 — Update `.gitignore` File
 
-![Edit .gitignore file](4.png)
-
+<p align="center">
+  <img src="ss/2.png" alt=".gitignore file" />
+  <br/>
+</p>
 ```
 .env
 .bedrock_agentcore.yaml
