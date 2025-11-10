@@ -22,106 +22,118 @@ Before starting, ensure you have:
 
 ## Step 1 — Create a New Repository on GitHub
 
-<p align="center">
-  <img src="ss/1.png" alt="New Repo"/>
-  <br/>
-</p>
-
 1. Go to your GitHub profile → **New Repository**.  
 2. Name it `agentcore`.  
 3. Set visibility to **Private** and check **Add README**.  
 4. Click **Create Repository**.
 
+<p align="center">
+  <img src="ss/1.png" alt="New Repo"/>
+  <br/>
+</p>
 ---
 
 ## Step 2 — Open Repository in Codespaces
+
+1. Click **Code → Codespaces → Create codespace on main**.
 
 <p align="center">
   <img src="ss/2.png" alt="Codespaces" />
   <br/>
 </p>
-
-1. Click **Code → Codespaces → Create codespace on main**.
-
 ---
 
-## Step 3 — Initialize Your Codespace
+## Step 3 — Create `.gitignore` & `.env` files
+
+```bash
+touch .gitignore .env
+```
 
 <p align="center">
   <img src="ss/3.png" alt="Initialize Codespace" />
   <br/>
 </p>
 
-```bash
-touch .gitignore .env
-```
-
-Both files will appear in your workspace.
-
 ---
 
-## Step 4 — Update `.gitignore` File
+## Step 4 — Update `.gitignore` File with the following filelist
 
-<p align="center">
-  <img src="ss/2.png" alt=".gitignore file" />
-  <br/>
-</p>
 ```
 .env
 .bedrock_agentcore.yaml
 ```
 
+<p align="center">
+  <img src="ss/4.png" alt=".gitignore file" />
+  <br/>
+</p>
 ---
 
-## Step 5 — Configure AWS Credentials
-
-![Edit .env file](5.png)
+## Step 5 — Configure AWS Credentials in .`env` file
 
 ```
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_DEFAULT_REGION=
 ```
-
+<p align="center">
+  <img src="ss/5.png" alt="env file" />
+  <br/>
+</p>
 ---
 
 ## Step 6 — Create an IAM User
 
-![Create IAM user](6.png)
-
 Navigate to **IAM → Users → Create User**.
+
+<p align="center">
+  <img src="ss/6.png" alt="AWS User" />
+  <br/>
+</p>
 
 ---
 
 ## Step 7 — Assign IAM Permissions
 
-![Attach IAM policies](6-1.png)
-
 Choose **Attach policies directly → AdministratorAccess**.
+
+<p align="center">
+  <img src="ss/6-1.png" alt="AWS User Permissions" />
+  <br/>
+</p>
 
 ---
 
 ## Step 8 — Review and Create IAM User
 
-![Review IAM user](7.png)
-
 Confirm and click **Create User**.
+
+<p align="center">
+  <img src="ss/7.png" alt="Review AWS User" />
+  <br/>
+</p>
 
 ---
 
 ## Step 9 — Generate Access Keys
 
-![Access key wizard](7-1.png)
-
 Select **Command Line Interface (CLI)** → click **Next**.
+
+<p align="center">
+  <img src="ss/7-1.png" alt="CLI" />
+  <br/>
+</p>
 
 ---
 
 ## Step 10 — Retrieve Access Keys
 
-![Retrieve access keys](8.png)
-
 Copy or download credentials and update `.env`.
+
+<p align="center">
+  <img src="ss/8.png" alt="Access Key" />
+  <br/>
+</p>
 
 ---
 
@@ -129,36 +141,38 @@ Copy or download credentials and update `.env`.
 
 ## Step 11 — Create Agent Folder and Script
 
-![Create docker folder and agent file](9.png)
-
 ```bash
 mkdir docker
 cd docker
 touch agentcore.py
 ```
 
+<p align="center">
+  <img src="ss/9.png" alt="agent folder" />
+  <br/>
+</p>
+
 ---
 
 ## Step 12 — Add Requirements
 
-![Create requirements.txt file](10.png)
-
 ```bash
 touch requirements.txt
 ```
-
-Contents:
 
 ```
 strands-agents
 bedrock-agentcore
 ```
 
+<p align="center">
+  <img src="ss/10.png" alt="requirements" />
+  <br/>
+</p>
+
 ---
 
 ## Step 13 — Write the AgentCore Python Script
-
-![Add agentcore.py code](11.png)
 
 ```python
 from dotenv import load_dotenv
@@ -178,51 +192,72 @@ def invoke_agent(payload, context):
 app.run()
 ```
 
+<p align="center">
+  <img src="ss/11.png" alt="code" />
+  <br/>
+</p>
+
 ---
 
 ## Step 14 — Install Dependencies
 
-![Install dependencies](12.png)
-
 ```bash
-pip install -r requirements.txt
+pip install -r strands-agents python-dotenv bedrock-agentcore
 ```
+
+<p align="center">
+  <img src="ss/12.png" alt="dependencies" />
+  <br/>
+</p>
 
 ---
 
 ## Step 15 — Run the Agent Locally
 
-![Run the agent locally](13.png)
-
 ```bash
 python agentcore.py
 ```
+
+<p align="center">
+  <img src="ss/13.png" alt="execution" />
+  <br/>
+</p>
 
 ---
 
 ## Step 16 — Verify Port Forwarding
 
-![Verify forwarded port](13-1.png)
-
 Ensure **port 8080** is active and auto-forwarded.
+
+<p align="center">
+  <img src="ss/13-1.png" alt="portforwarding" />
+  <br/>
+</p>
 
 ---
 
 ## Step 17 — Configure Bedrock AgentCore
 
-![Configure agentcore](14.png)
-
 ```bash
+export $(cat /workspaces/agentcore/.env | grep -v ^# | xargs)
+
+
+pip install bedrock-agentcore-starter-toolkit
+
+
 agentcore configure --entrypoint agentcore.py --name demoagent
 ```
 
 Follow prompts to auto-create IAM role, ECR repo, and short-term memory.
 
+<p align="center">
+  <img src="ss/14.png" alt="configure" />
+  <br/>
+</p>
+
 ---
 
 ## Step 18 — Confirm Configuration Summary
-
-![Configuration summary](15.png)
 
 You’ll see:
 
@@ -235,21 +270,27 @@ ECR Repository: Auto-create
 Memory: Short-term (30-day retention)
 ```
 
+<p align="center">
+  <img src="ss/15.png" alt="summary" />
+  <br/>
+</p>
+
 ---
 
 ## Step 19 — Launch Your Agent
-
-![Launch agentcore](16.png)
 
 ```bash
 agentcore launch
 ```
 
+<p align="center">
+  <img src="ss/16.png" alt="launch" />
+  <br/>
+</p>
+
 ---
 
 ## Step 20 — Deployment Success
-
-![Deployment success](17.png)
 
 **Key Outputs:**  
 - Agent ARN  
@@ -260,24 +301,39 @@ agentcore launch
 Use:
 ```bash
 agentcore status
-agentcore invoke '{"prompt": "Hello"}'
+agentcore invoke '{"prompt": "What is LLM?"}'
 ```
 
 ---
 
 ## Step 21 — Test the Agent in AWS Agent Sandbox
 
-![AWS Agent Sandbox test](8.png)
-
 Example input:
 ```json
-{ "prompt": "Who is LLM?" }
+{ "prompt": "What is LLM?" }
 ```
 
 **Output:**
 > “LLM stands for Large Language Model. It’s a type of artificial intelligence system trained on vast amounts of text data to understand and generate human language...”
 
+<p align="center">
+  <img src="ss/17.png" alt="requirements" />
+  <br/>
+</p>
+
 ---
+
+## Step 22 — Destroy AgentCore Resources
+
+```
+agentcore destroy
+```
+<p align="center">
+  <img src="ss/18.png" alt="requirements" />
+  <br/>
+</p>
+
+--- 
 
 # 🧩 Summary
 
