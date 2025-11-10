@@ -31,6 +31,7 @@ Before starting, ensure you have:
   <img src="ss/1.png" alt="New Repo"/>
   <br/>
 </p>
+
 ---
 
 ## Step 2 — Open Repository in Codespaces
@@ -41,6 +42,7 @@ Before starting, ensure you have:
   <img src="ss/2.png" alt="Codespaces" />
   <br/>
 </p>
+
 ---
 
 ## Step 3 — Create `.gitignore` & `.env` files
@@ -67,6 +69,7 @@ touch .gitignore .env
   <img src="ss/4.png" alt=".gitignore file" />
   <br/>
 </p>
+
 ---
 
 ## Step 5 — Configure AWS Credentials in .`env` file
@@ -80,6 +83,7 @@ AWS_DEFAULT_REGION=
   <img src="ss/5.png" alt="env file" />
   <br/>
 </p>
+
 ---
 
 ## Step 6 — Create an IAM User
