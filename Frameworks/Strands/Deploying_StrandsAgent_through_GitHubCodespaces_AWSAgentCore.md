@@ -23,7 +23,7 @@ Before starting, ensure you have:
 ## Step 1 — Create a New Repository on GitHub
 
 <p align="center">
-  <img src="ss/1.png" alt="New Repo" h="300" w="400"/>
+  <img src="ss/1.png" alt="New Repo" height="300" width="400"/>
   <br/>
 </p>
 
